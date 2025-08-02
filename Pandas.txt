@@ -1,0 +1,26 @@
+1. pd.read_csv(movie_name) # to create dataframe
+2. datafreame1.merge(dataframe2,on="similar_column_name") #marge 2 dataframes
+3. dataframe.isnull().sum() = to fine no. of null values present inside the dataframe
+4. dataframe.dropna(inplace = True) = drop the null rows
+5. dataframe. info() = to get all heads name and other info
+5. dataframe.duplicated().sum() = no. duplicate rows or data
+6. import ast
+   def converter(obj):
+    	l=[]
+    	for i in ast.literal_eval(obj):
+            l.append(i['name'])
+    	return l
+    ast.literal_eval => change the string data into list
+
+7. !pip install -U scikit-learn => installing scikit-learn
+
+8. !pip install nltk => installing nltk libraries stemmin purpose 
+
+9. from nltk.stem.porter import PorterStemmer => for stem words
+   ps = PorterStemmer()
+
+10. from sklearn.feature_extraction.text import CountVectorizer
+   cv = CountVectorizer(max_features = 5000, stop_words = 'english')
+   cv.fit_transform(dataframe) => for vectorization 
+
+11. dataframe.toarry() = > converting into numpy array
