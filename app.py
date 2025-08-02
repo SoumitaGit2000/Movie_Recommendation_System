@@ -6,7 +6,7 @@ import requests
 movie = pickle.load(open('movies_dictionary.pkl','rb'))
 movie_df = pd.DataFrame(movie)
 
-similarity = pickle.load(open('similarity.pkl','rb'))
+similarity = pickle.load(open('similarity.pkl','wb'))
 
 def fetch_poster(movie_id):
     response = requests.get(f'https://api.themoviedb.org/3/movie/{movie_id}?api_key=fdbe560f08500df98a5c44074d4d1d1c')
